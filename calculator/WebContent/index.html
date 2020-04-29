@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+	<h1>Calculator</h1>
+	  <form action="process" method="GET">
+	
+	
+	<input type="text" id="box" name="expression" placeholder="enter number"><br>
+	<button type ="submit">=</button>
+	</form>
+	<button onclick="clearbox()">c</button>
+	<button id="one" value="one" onclick="put(1)">1</button>
+	<button id="two" onclick="put(2)" >2</button>
+	<button id="three" onclick="put(3)">3</button>
+	<button onclick="put('+')">+</button>
+	<br>
+	<button id="four" onclick="put(4)">4</button>
+	<button id="five" onclick="put(5)">5</button>
+	<button id="six" onclick="put(6)">6</button>
+	<button onclick="put('-')">-</button>
+	<br>
+	<button id="seven" onclick="put(7)">7</button>
+	<button id="eight" onclick="put(8)">8</button>
+	<button id="nine" onclick="put(9)">9</button>
+	<button onclick="put('*')">*</button>
+	<br>
+	<button id="zero" onclick="put(0)">0</button>
+	<button id="point" onclick="put('.')">.</button>
+	<button onclick="put('/')">/</button>
+</body>
+
+<script>
+
+
+	function put(id)
+	{
+	      
+		document.getElementById("box").value =document.getElementById("box").value + id;
+		
+		
+	}
+	
+	function clearbox()
+	{
+		document.getElementById("box").value = "";
+	}
+	
+	
+</script>
+</html>
